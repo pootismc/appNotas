@@ -13,11 +13,55 @@ module.exports = {
             texto: req.body.text
         }) 
         .then(function(data){
-            res.send(data)
+            res.redirect('/')
         })
         .catch(function(e){
             res.send(e)
         })
     },
-    
+    detail: function (req, res) {
+        db.Nota.findByPk (req.params.id)
+        .then (function(detail){
+            res.render('detail', {detail:detail})
+        })
+        .catch(function(e) {
+            res.send (e)
+        })
+    },
+    update: function (req, res) {
+        // let detail = db.Nota.findByPk (req.params.id)
+        // .then (function(detail){
+        // })
+        // .catch(function(e) {
+        //     res.send (e)
+        // })
+
+        db.Nota.update ({
+            titulo: req.body.title,
+            texto: req.body.text
+        },{
+            where: {
+                id : req.params.id
+            }
+        })
+        .then(function(data){
+            res.redirect('/')
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+    },
+    delete: function (req, res) {
+        db.Nota.destroy ({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(data){
+            res.redirect('/')
+        })
+        .catch(function(e){
+            res.send(e)
+        })
+    }
 }

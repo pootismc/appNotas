@@ -22,14 +22,14 @@
     <main>
         <section class="editForm">
             <h1>Editar una nota</h1>
-            <form action="">
+            <form action="/detail/<%= detail.id %>/?_method=PUT" method="POST">
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="title">
+                    <input type="text" name="title" value="<%= detail.titulo%>">
                 </div>
                 <div>
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea id="message" name="text" cols="30" rows="10"><%= detail.texto%></textarea>
                 </div>
                 <button type="submit">Editar</button>
             </form>
