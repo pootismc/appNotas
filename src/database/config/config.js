@@ -4,7 +4,7 @@ module.exports = {
     "username":"230184_pootismc",
     "password": "Brackito07",
     "database": "fabriziofranceschetti_appnotas",
-    "host": "mysql-frandh.alwaysdata.net",
+    "host": "mysql-fabriziofranceschetti.alwaysdata.net",
     "dialect": "mysql",
     "port": "3306"
   },
