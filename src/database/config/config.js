@@ -1,23 +1,23 @@
 
 module.exports = {
   "development": {
-    "username":"root",
-    "password": "pootismc",
-    "database": "notas",
-    "host": "127.0.0.1",
-    "port": "3306",
-    "dialect": "mysql"
+    "username":"230184_pootismc",
+    "password": "Brackito07",
+    "database": "fabriziofranceschetti_appnotas",
+    "host": "mysql-frandh.alwaysdata.net",
+    "dialect": "mysql",
+    "port": "3306"
   },
   "test": {
     "username": "root",
-    "password": "pootismc",
+    "password":null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
